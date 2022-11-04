@@ -25,7 +25,7 @@ Deploy link : https://ch7-binarcarrental.netlify.app/
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/hy-reza/Car-Management-API.git
+   https://github.com/hy-reza/challenge-react.git
    ```
 2. Install packages
    ```sh
