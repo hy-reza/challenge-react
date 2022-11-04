@@ -1,14 +1,24 @@
 import React from "react";
 import toRupiah from "@develoka/angka-rupiah-js";
 
-const Card = ({ car, img }) => {
+const Card = ({ car }) => {
   return (
-    <div className="card mx-3 my-3 " style={{ width: "25rem", "borderRadius": "10px" }} key={car.id}>
+    <div
+      className="card mx-3 my-3 "
+      style={{ width: "25rem", borderRadius: "10px" }}
+      key={car.id}
+    >
       <img
-        src={img}
+        // src={img}
+        loading="lazy"
+        src={`https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/public/${car.image}`}
         className="img-fluid"
         alt="{car.manufacture}"
-        style={{ objectFit: "cover", height: 250, "borderRadius": "10px 10px 0px 0px" }}
+        style={{
+          objectFit: "cover",
+          height: 250,
+          borderRadius: "10px 10px 0px 0px",
+        }}
       />
       <div className="card-body">
         <p className="card-text">
@@ -50,13 +60,15 @@ const Card = ({ car, img }) => {
                       className="border rounded  me-2 mt-2 p-2"
                       key={tipe + new Date().getTime()}
                       style={{
-                        "listStyle": "none",
-                        "backgroundColor": "#EBEBEB",
+                        listStyle: "none",
+                        backgroundColor: "#EBEBEB",
                         color: "#393939",
                         padding: "1px",
                       }}
                     >
-                      <small style={{ "textSize": "1px" }}>{tipe}</small>
+                      <small style={{ textSize: "1px", color: "gray" }}>
+                        {tipe}
+                      </small>
                     </li>
                   ))}
               </ul>

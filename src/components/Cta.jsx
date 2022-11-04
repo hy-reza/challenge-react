@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Cta = () => {
   return (
     <>
@@ -10,13 +12,15 @@ const Cta = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.{" "}
             </p>
-            <button
-              type="button"
-              href="./cars.html"
-              className="btn btn-success mt-1 fw-bold fs-7"
-            >
-              Mulai Sewa Mobil
-            </button>
+            <Link to="/cars">
+              <button
+                type="button"
+                href="./cars.html"
+                className="btn btn-success mt-1 fw-bold fs-7"
+              >
+                Mulai Sewa Mobil
+              </button>
+            </Link>
           </div>
         </div>
       </section>
